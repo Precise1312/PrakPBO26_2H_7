@@ -6,6 +6,7 @@ public class TugasDemo {
         Pulpen pulpen1 = new Pulpen();
         Laptop laptop1 = new Laptop();
         Tas tas1 = new Tas();
+        AlatTulis penghapus1 = new AlatTulis();
 
         pensil1.setJenis("pensil");
         pensil1.setMerk("Staedler");
@@ -24,6 +25,10 @@ public class TugasDemo {
         tas1.setJenis("Tas Kerja");
         tas1.setMerk("Eiger");
         tas1.printInfo();
+
+        penghapus1.setJenis("Penghapus");
+        penghapus1.setMerk("Tombow");
+        penghapus1.printInfo();
 
 
     }
