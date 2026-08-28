@@ -23,5 +23,4 @@ public class BikeDemo {
         roadBike1.printInfo();
 
     }
-    
 }

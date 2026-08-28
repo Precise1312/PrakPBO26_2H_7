@@ -1,7 +1,7 @@
 package P1.BikeDemo;
 
-public class RoadBike extends Bike{
-    private int tireWidth;
+public class RoadBike extends Bike {
+     private int tireWidth;
 
     public void setTireWidth(int width) {
     tireWidth = width; 
