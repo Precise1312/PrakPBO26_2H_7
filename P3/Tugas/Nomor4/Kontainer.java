@@ -30,7 +30,6 @@ public class Kontainer {
         }
         else {
             System.out.println("Maaf, berat muatan melebihi kapasitas maksimal kontainer.");
-            beratMuatan = 0;
         }
         
     }

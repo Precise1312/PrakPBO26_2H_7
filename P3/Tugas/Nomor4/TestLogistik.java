@@ -1,4 +1,5 @@
 package P3.Tugas.Nomor4;
+
 import java.util.Scanner;;
 
 public class TestLogistik {
@@ -9,20 +10,34 @@ public class TestLogistik {
         System.out.println("Nama Pemilik Kontainer: " + kontainerAlfa.getNamaPemilik());
         System.out.println("Kapasitas Maksimal: " + kontainerAlfa.getKapasitasMaksimal() + " kg");
 
-        System.out.println("\nMemasukkan muatan baru seberat 6.000 kg...");
-        kontainerAlfa.tambahMuatan(6000);
-        System.out.println("Berat muatan saat ini: " + kontainerAlfa.getBeratMuatanSaatIni() + " kg");
+        while (true) {
+        System.out.println();
+        System.out.println("Masukkan nomor menu");
+        System.out.println("1. Tambah Muatan");
+        System.out.println("2. kurang Muatan");
+        int pilihan = sc.nextInt();
+        switch (pilihan) {
+            case 1:
+                System.out.println("masukkan jumlah tambah muatan");
+                int tambah = sc.nextInt();
+                System.out.println("\nMemasukkan muatan baru seberat "+tambah+" ...");
+                kontainerAlfa.tambahMuatan(tambah);
+                System.out.println("Berat muatan saat ini: " + kontainerAlfa.getBeratMuatanSaatIni() + " kg");
+                break;
 
-        System.out.println("\nMemasukkan muatan baru seberat 4.000 kg...");
-        kontainerAlfa.tambahMuatan(4000);
-        System.out.println("Berat muatan saat ini: " + kontainerAlfa.getBeratMuatanSaatIni() + " kg");
-
-        System.out.println("\nMembongkar muat/menurunkan barang seberat 2500 kg...");
-        kontainerAlfa.turunkanMuatan(2500);
-        System.out.println("Berat muatan saat ini: " + kontainerAlfa.getBeratMuatanSaatIni() + " kg");
-
-        System.out.println("\nMembongkar muat/menurunkan barang seberat 1.500 kg...");
-        kontainerAlfa.turunkanMuatan(1500);
-        System.out.println("Berat muatan saat ini: " + kontainerAlfa.getBeratMuatanSaatIni() + " kg");
+            case 2:
+                System.out.println("masukkan jumlah kurang muatan");
+                int kurang = sc.nextInt();
+                System.out.println("\nmengurangi muatan seberat "+kurang+" ...");
+                kontainerAlfa.turunkanMuatan(kurang);
+                System.out.println("Berat muatan saat ini: " + kontainerAlfa.getBeratMuatanSaatIni() + " kg");
+                break;
+            
+            default:
+                System.out.println("nomor invalid");
+                break;
+        }
+        }
+        
     }
 }
