@@ -1,4 +1,4 @@
-package P3.Tugas;
+package P3.Tugas.Nomor1;
 
 public class EncapDemo {
     private String name;
@@ -19,6 +19,9 @@ public class EncapDemo {
     public void setAge(int newAge){
         if(newAge > 30){
             age = 30;
+        }
+        else if(newAge < 18){
+            age = 18;
         }
         else{
             age = newAge;
